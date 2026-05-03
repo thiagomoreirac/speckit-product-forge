@@ -39,6 +39,12 @@ specify extension add v-model \
   --from https://github.com/leocamello/spec-kit-v-model/archive/refs/tags/v0.5.0.zip
 ```
 
+> ⚠️ The URL above uses a mutable git tag. For regulated or production environments,
+> pin to a commit SHA: replace `refs/tags/v0.5.0.zip` with `<COMMIT_SHA>.zip` where
+> `<COMMIT_SHA>` is resolved from the GitHub API:
+> `curl https://api.github.com/repos/leocamello/spec-kit-v-model/git/refs/tags/v0.5.0`
+> (use the `"object.sha"` field in the response).
+
 To verify the install, check that `speckit.v-model.requirements` is
 available in your slash-command list.
 

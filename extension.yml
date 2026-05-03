@@ -27,17 +27,14 @@ optional_extensions:
     version: ">=0.5.0"
     repository: "https://github.com/leocamello/spec-kit-v-model"
     install: |
-      # ⚠️ Security note: always install from a pinned commit SHA, not a mutable tag.
-      # Tags can be reassigned; a SHA guarantees you get exactly what was reviewed.
-      #
-      # To resolve the SHA for a tag:
+      # ⚠️ Security note: the URL below uses a mutable git tag. Tags can be
+      # reassigned; for regulated or production environments, replace
+      # archive/refs/tags/v0.5.0.zip with archive/<COMMIT_SHA>.zip where
+      # <COMMIT_SHA> is the full 40-char SHA from:
       #   curl https://api.github.com/repos/leocamello/spec-kit-v-model/git/refs/tags/v0.5.0
-      # Then verify the archive checksum before installing:
-      #   shasum -a 256 <downloaded-archive>.zip  # compare with the value documented in CHANGELOG.md
-      #
-      # Replace <COMMIT_SHA> with the full 40-character SHA resolved above before running.
+      # (use the "object.sha" field in the response)
       specify extension add v-model \
-        --from https://github.com/leocamello/spec-kit-v-model/archive/<COMMIT_SHA>.zip
+        --from https://github.com/leocamello/spec-kit-v-model/archive/refs/tags/v0.5.0.zip
     purpose: >
       Enables `feature_mode: v-model`. Provides the formal V-Model
       artifact progression (IEEE 29148 requirements, IEEE 1016 system
