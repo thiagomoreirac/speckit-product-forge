@@ -27,6 +27,12 @@ optional_extensions:
     version: ">=0.5.0"
     repository: "https://github.com/leocamello/spec-kit-v-model"
     install: |
+      # ⚠️ Security note: the URL below uses a mutable git tag. Tags can be
+      # reassigned; for regulated or production environments, replace
+      # archive/refs/tags/v0.5.0.zip with archive/<COMMIT_SHA>.zip where
+      # <COMMIT_SHA> is the full 40-char SHA from:
+      #   curl https://api.github.com/repos/leocamello/spec-kit-v-model/git/refs/tags/v0.5.0
+      # (use the "object.sha" field in the response)
       specify extension add v-model \
         --from https://github.com/leocamello/spec-kit-v-model/archive/refs/tags/v0.5.0.zip
     purpose: >

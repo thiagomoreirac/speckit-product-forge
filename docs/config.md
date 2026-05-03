@@ -319,6 +319,9 @@ Selects the phase map for new features. Valid values:
   external [V-Model Extension Pack](https://github.com/leocamello/spec-kit-v-model)
   (`leocamello/spec-kit-v-model` ≥ 0.5.0).
   **Required install:** `specify extension add v-model --from https://github.com/leocamello/spec-kit-v-model/archive/refs/tags/v0.5.0.zip`.
+  > ⚠️ Mutable tag — for regulated/production use, pin to a commit SHA instead
+  > (resolve via `curl https://api.github.com/repos/leocamello/spec-kit-v-model/git/refs/tags/v0.5.0`,
+  > use `"object.sha"`).
   Without it, selecting v-model mode aborts — there is no silent
   fallback. See [`docs/v-model-integration.md`](./v-model-integration.md).
 
